@@ -40,3 +40,7 @@ img {
   font-size: 14px;
   margin-top: 10px;
 }
+.dashboard, .admin{
+  text-align: center;
+  font-size: 20px;
+}

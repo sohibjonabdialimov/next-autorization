@@ -4,6 +4,7 @@ import { InputLabel } from "@mui/material";
 import { Input } from "@mui/material";
 import Button from "@mui/material/Button";
 import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -12,6 +13,13 @@ import { useRouter } from "next/navigation";
 export default function Login() {
   const router = useRouter();
 
+  const pathname = usePathname();
+  
+  useEffect(() => {
+    if(pathname === "/login" && localStorage.getItem("token")){
+      router.push("/admin");
+    }
+  }, [])
   const formik = useFormik({
     initialValues: {
       email: "",

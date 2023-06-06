@@ -14,7 +14,7 @@ export default function Home() {
     }
   }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="dashboard">
       <h1>Dashboard Page</h1>
 
       <Button variant="contained" size="medium">
